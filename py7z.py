@@ -31,7 +31,7 @@ __license__ = 'GNU GPL'
 
 __all__ = ['SevenZipError', 'FatalError', 'CommandLineError', 'MemError', 'UserInterrupt',
 			'unpack', 'unpack_no_full_paths', 'pack', 'test', 'list', 'comp7z', 'compZip',
-			'compGZip', 'compBZip2', 'compLZMA', 'compPPMd']
+			'compGZip', 'compBZip2', 'compLZMA', 'compLZMA2', 'compPPMd']
 
 
 import subprocess as sp
@@ -48,6 +48,7 @@ compZip = 'zip'
 compGZip = 'gzip'
 compBZip2 = 'bzip2'
 compLZMA = 'lzma'
+compLZMA2 = 'lzma2'
 compPPMd = 'ppmd'
 
 
@@ -141,7 +142,7 @@ def test(archivepath):
 	
 	sub = sp.Popen(args, stdout=sp.PIPE, stdin=sp.PIPE)
 	res = sub.wait()
-	print res
+	print(res)
 	if res == 0:
 		return True
 	elif res == 1 or res == 2:
