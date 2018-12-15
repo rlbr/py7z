@@ -1,7 +1,7 @@
 #Argomirr is the original author but project was dead; see fork
 from setuptools import setup
 setup(name='py7z',
-      version='2.2',
+      version='2.2.1',
       description='Python wrapper around 7-zip',
       url='https://github.com/rlbr/py7z',
       author='Raphael Roberts',

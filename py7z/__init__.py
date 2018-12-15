@@ -198,6 +198,7 @@ def list_archive(archivepath):
                 break
             prev = line
         spans = list(match.span() for match in re.finditer('-+',line))
+        spans[-1] = (spans[-1][0],None)
         sub_strings = (prev[start:end] for start,end in spans)
         word_lists = (re.findall('[^ ]+',sub_string) for sub_string in sub_strings)
         cats = list(' '.join(words) for words in word_lists)
