@@ -1,4 +1,5 @@
-#Argomirr, original author but project is dead; see fork
+#Argomirr is the original author but project was dead; see fork
+from setuptools import setup
 setup(name='py7z',
       version='1.0',
       description='Python wrapper around 7-zip',
