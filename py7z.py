@@ -65,8 +65,6 @@ config = MyParser()
 config.read('config.ini')
 
 _SZIP_PATH = config.getpath('7z','executable')
-_SZ_LIST_PTTRN = re.compile(r'testing +[\w\\./ &!#@]+', re.I) # <-- That's bad :(
-_SZ_LIST_STRIP = re.compile(r'Testing +', re.I)
 
 comp7z = '7z'
 compZip = 'zip'
